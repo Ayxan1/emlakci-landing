@@ -1,12 +1,22 @@
+<script setup>
+import { siteConfig } from '../config.js'
+
+const { footer } = siteConfig
+</script>
+
 <template>
   <footer class="footer">
-    <div class="footer-bg" />
+    <div
+      class="footer-bg"
+      :style="{
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.72)), url(${footer.backgroundImage})`,
+      }"
+    />
 
     <div class="footer-content">
-      <p class="blink-text">Dizayn, Təmir / Tikinti</p>
-
-      <h2 class="footer-title">Siz evinizin Xəyalını qurun</h2>
-      <p class="footer-sub">Biz sıfırdan tikək-təmir edək</p>
+      <p class="blink-text">{{ footer.blinkText }}</p>
+      <h2 class="footer-title">{{ footer.title }}</h2>
+      <p class="footer-sub">{{ footer.subtitle }}</p>
     </div>
   </footer>
 </template>
@@ -22,10 +32,9 @@
 .footer-bg {
   position: absolute;
   inset: 0;
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.72)),
-    url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1200&q=80')
-      center / cover no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   z-index: 0;
 }
 

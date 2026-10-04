@@ -1,12 +1,9 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
+import { siteConfig } from '../config.js'
 
-const slides = [
-  { name: 'Türkiyə', image: '/assets/carousel/turkiye.jpg' },
-  { name: 'Şimali Kipr', image: '/assets/carousel/simali-kipr.jpg' },
-  { name: 'Dubay', image: '/assets/carousel/dubay.jpg' },
-  { name: 'Serbiya', image: '/assets/carousel/serbiya.jpg' },
-]
+const { header } = siteConfig
+const slides = header.carousel
 
 const current = ref(0)
 let timer = null
@@ -20,7 +17,7 @@ function goTo(index) {
 }
 
 onMounted(() => {
-  timer = setInterval(next, 3500)
+  timer = setInterval(next, header.carouselInterval)
 })
 
 onUnmounted(() => {
@@ -56,7 +53,7 @@ onUnmounted(() => {
     </div>
 
     <a
-      href="https://www.instagram.com/shaigalieff/"
+      :href="header.instagram"
       target="_blank"
       rel="noopener noreferrer"
       class="instagram-link"
@@ -67,8 +64,8 @@ onUnmounted(() => {
       </svg>
     </a>
 
-    <a href="/" class="logo-link">
-      <img src="/assets/logo.png" alt="Emlakci.az" class="logo" />
+    <a :href="header.logoLink" class="logo-link">
+      <img :src="header.logo" :alt="header.logoAlt" class="logo" />
     </a>
   </header>
 </template>
