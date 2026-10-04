@@ -21,17 +21,17 @@ export const siteConfig = {
       { name: 'Türkiyə', image: '/assets/carousel/turkiye.jpg' },
       { name: 'Şimali Kipr', image: '/assets/carousel/simali-kipr.jpg' },
       { name: 'Dubay', image: '/assets/carousel/dubay.jpg' },
-      { name: 'Serbiya', image: '/assets/carousel/serbiya.jpg' },
+      { name: 'Baku/Seebreeze', image: '/assets/carousel/seabreeze.jpg' },
     ],
   },
 
   // Hero: banner mətni, WhatsApp, şəkil
   hero: {
-    badge: 'Emlak xidməti',
-    question: 'Əmlakınızın satışı və ya icarəsi yoxsa?',
-    subtitle: 'Bizə həvalə edin — peşəkar komandamız sizin üçün buradadır.',
-    phone: '+994 55 289 44 44',
-    whatsappNumber: '994552894444', // yalnız rəqəmlər, + olmadan
+    badge: 'Xidmətlərimiz',
+    question: 'Əmlakınızı satırsız - icarəyə verirsiz?',
+    subtitle: 'Bizə həvalə edin — peşəkar video çəkiliş (video-təqdimat).',
+    phone: '+994 70 289 44 44',
+    whatsappNumber: '994702894444', // yalnız rəqəmlər, + olmadan
     whatsappButtonText: 'WhatsApp ilə yazın',
     image: '/assets/hero-bg.png',
     imageAlt: 'Emlakci.az',
