@@ -1,0 +1,24 @@
+; Cloudflare DNS Import — emlakci.az
+; Railway landing page qeydləri
+;
+; Import addımları:
+; 1. Cloudflare → emlakci.az → DNS → Import and Export
+; 2. Bu faylı seçin
+; 3. "Proxy imported DNS records" işarələyin (CNAME-lər narıncı bulud olsun)
+; 4. Import edin
+;
+; Əvvəl köhnə A qeydlərini silin (103.228.168.195):
+;    A → * , A → emlakci.az , A → www
+;
+; Email qeydləri (MX, SPF, DKIM) bu faylda yoxdur — onlar qalsın.
+
+$ORIGIN emlakci.az.
+$TTL 3600
+
+; --- emlakci.az (kök domen) ---
+@                   3600    IN    CNAME   mf39l63s.up.railway.app.
+_railway-verify     3600    IN    TXT     "railway-verify=9e750d1b82cfd2171d864d56b0999f89ba107862e3961fe273bad35853b46068"
+
+; --- www.emlakci.az ---
+www                 3600    IN    CNAME   nzvquiuy.up.railway.app.
+_railway-verify.www 3600    IN    TXT     "railway-verify=6188df7a5d223f9b245797d86a5d50f02c48f6bc82ccaaa68eca4fc913aac7b8"
