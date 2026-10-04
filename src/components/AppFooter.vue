@@ -9,7 +9,7 @@ const { footer } = siteConfig
     <div
       class="footer-bg"
       :style="{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.72)), url(${footer.backgroundImage})`,
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url(${footer.backgroundImage})`,
       }"
     />
 

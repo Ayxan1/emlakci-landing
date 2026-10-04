@@ -7,7 +7,7 @@ export const siteConfig = {
   site: {
     title: 'Emlakci.az — Daşınmaz Əmlak və İnvestisiya',
     description:
-      'Emlakci.az — Daşınmaz əmlak və investisiya şirkəti. Türkiyə, Şimali Kipr, Dubay, Serbiya.',
+      'Emlakci.az — Daşınmaz əmlak və investisiya şirkəti. Türkiyə, Şimali Kipr, Dubay, Baku/Sea Breeze',
   },
 
   // Header: karusel, Instagram, logo
@@ -21,7 +21,7 @@ export const siteConfig = {
       { name: 'Türkiyə', image: '/assets/carousel/turkiye.jpg' },
       { name: 'Şimali Kipr', image: '/assets/carousel/simali-kipr.jpg' },
       { name: 'Dubay', image: '/assets/carousel/dubay.jpg' },
-      { name: 'Baku/Seebreeze', image: '/assets/carousel/seabreeze.jpg' },
+      { name: 'Baku/Sea Breeze', image: '/assets/carousel/seabreeze.jpg' },
     ],
   },
 
@@ -42,8 +42,7 @@ export const siteConfig = {
     blinkText: 'Dizayn, Təmir / Tikinti',
     title: 'Siz evinizin Xəyalını qurun',
     subtitle: 'Biz sıfırdan tikək-təmir edək',
-    backgroundImage:
-      'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1200&q=80',
+    backgroundImage: '/assets/footer-bg.jpg',
   },
 }
 
